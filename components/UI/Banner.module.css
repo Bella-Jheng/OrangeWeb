@@ -1,0 +1,16 @@
+.banner {
+    color:#9EAF6A;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ceccccd2;
+    padding: 10px;
+    background-image: url("https://www.transparenttextures.com/patterns/tree-bark.png");
+}
+
+.title {
+    position: relative;
+    bottom: 10px;
+}

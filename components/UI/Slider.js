@@ -5,6 +5,7 @@ import slideItems from "../data";
 
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import {BorderButtonWhiteWords} from './Button'
 
 const Wrapper = styled.div`
   height: 100%;
@@ -41,14 +42,14 @@ const Slider = () => {
       </div>
       <Wrapper slideIndex={slideIndex}>
         {slideItems.map((item) => (
-          <div className={classes.slide}>
+          <div className={classes.slide} key={item.id}>
             <div className={classes.imageContainer}>
               <img alt="Slider" src={item.img} className={classes.image} />
             </div>
             <div className={classes.infoContainer}>
               <h1 className={classes.infoTitle}>{item.title}</h1>
               <p className={classes.infoDescript}>{item.descript}</p>
-              <button className={classes.infoButton}>看更多</button>
+              <BorderButtonWhiteWords title='閱讀更多' />
             </div>
           </div>
         ))}

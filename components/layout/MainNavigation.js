@@ -4,8 +4,8 @@ import classes from "./MainNavigation.module.css";
 import Image from "next/image";
 
 //MateriaUI
-import { Badge } from "@material-ui/core";
-import { ShoppingCartOutlined } from "@material-ui/icons";
+import Badge from '@mui/material/Badge';
+import ShoppingCartOutlined from "@mui/icons-material/ShoppingCartOutlined";
 import MenuIcon from "@mui/icons-material/Menu";
 import useMediaQuery from "@mui/material/useMediaQuery";
 

@@ -1,0 +1,91 @@
+.container {
+}
+
+.wrapper {
+  padding: 125px 50px 50px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginContainer {
+  width: 50%;
+  height: 75%;
+  background-color: white;
+  text-align: center;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.header{
+    padding: 10px;
+}
+
+.link{
+    padding: 0px 20px;
+    cursor: pointer;
+}
+
+.link:hover{
+    color: #fe7f2e;
+}
+
+.link.visited {
+    background-color: #9EAF6A;
+    border-radius: 5px;
+    color: white;
+}
+
+.form, .buttonContainer{
+    padding:0 20% 10px 20%;
+}
+
+.form button{
+    width: 100%;
+}
+
+.inputContainer{
+    margin-bottom: 40px;
+}
+
+.forgetPassword{
+    text-decoration: none;
+    color: #666;
+    font-size: 10px;
+    margin: auto 3px;
+}
+
+.forgetPassword:hover{
+    color: #FE7F2E;
+}
+
+.loginHorizontal{
+    font-size: 10px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #ced4da;
+    line-height: 0.1em;
+    margin: 25px 0 20px;
+}
+
+.loginHorizontal span{
+    padding: 0 10px;
+    background-color: white;
+}
+
+.googleLogin{
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 2px;
+    text-align: center;
+    width: 100%;
+    color: #666;
+    cursor: pointer;
+}
+
+.googleLogin>span{
+    margin-left: 5px;
+}

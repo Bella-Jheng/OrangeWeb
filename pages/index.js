@@ -1,9 +1,10 @@
 import Head from "next/head";
 import { Fragment } from "react";
-import styles from "../styles/Home.module.css";
-import Banner from "../components/UI/Banner";
 import Slider from "../components/UI/Slider";
 import Products from '../components/products/Products'
+import Picture from "../components/UI/Picture";
+import Introduction from '../components/UI/Introduction';
+import Horizantal from "../components/UI/Horizantal";
 
 export default function Home() {
   return (
@@ -15,7 +16,11 @@ export default function Home() {
         />
       </Head>
       <Slider />
+      <Horizantal title='最新商品'/>
       <Products />
+      <Picture />
+      <Horizantal title='緣起'/>
+      <Introduction />
     </Fragment>
   );
 }

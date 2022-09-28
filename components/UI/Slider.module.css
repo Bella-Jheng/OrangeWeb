@@ -3,7 +3,7 @@
   height: 100vh;
   display: flex;
   overflow: hidden;
-  background-color: coral;
+  background-color: white;
   position: relative;
 }
 
@@ -73,20 +73,8 @@
 }
 
 .infoDescript{
+    margin-bottom:10px ;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 3px;
-}
-
-.infoButton{
-    margin-top:10px ;
-    padding: 7px 30px;
-    background: rgba(999,999,999,0.1);
-    color: white;
-    border: 1px solid #FE7F2E;
-    border-radius: 5px;
-}
-
-.infoButton:hover{
-    background: rgba(999,999,999,0.5);
 }

@@ -21,6 +21,7 @@
     "npm": "^8.19.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^6.4.1",
     "sharp": "^0.31.0",
     "styled-components": "^5.3.5",
     "video-react": "^0.15.0"

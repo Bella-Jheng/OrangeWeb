@@ -17,7 +17,7 @@ export default function Home() {
         />
       </Head>
       <Slider />
-      <Horizantal title='最新商品'/>
+      <Horizantal title='精選商品'/>
       <ProderSlider />
       <Picture />
       <Horizantal title='緣起'/>

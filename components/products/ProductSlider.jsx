@@ -5,9 +5,11 @@ import { popularProducts } from "../data";
 
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import ProductItem from "./ProductItem";
 
 const Wrapper = styled.div`
   height: 100%;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   transition: all 1s ease;
@@ -33,14 +35,11 @@ const ProductSlider = () => {
         <ArrowLeftIcon />
       </div>
       <Wrapper slideIndex={slideIndex}>
-        {/* {slideItems.map((item) => (
-          <div className={classes.slide} key={item.id}>
-            <div className={classes.cardContainer}>
-             <img alt="Slider" src={item.img} className={classes.image} /> 
-            </div>
-           
-          </div>
-        ))} */}
+        {
+          popularProducts.map(item =>(        
+          <ProductItem item={item} key={item.id}/>
+        ))
+      }
       </Wrapper>
       <div
         className={`${classes.arrow}` + " " + `${classes.right}`}

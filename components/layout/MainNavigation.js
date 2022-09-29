@@ -31,11 +31,11 @@ const toggleHandler=()=>{
               <a className={classes.link}>線上商店</a>
             </Link>
           </div>
-          <div className={classes.menuItem}>
+          {/* <div className={classes.menuItem}>
             <Link href="/">
               <a className={classes.link}>文章</a>
             </Link>
-          </div>
+          </div> */}
         </div>
         <div className={classes.right}>
           <div className={classes.menuItem}>

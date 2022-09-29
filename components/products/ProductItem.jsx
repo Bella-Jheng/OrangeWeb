@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import classes from "./ProductItem.module.css";
+import Link from "next/link";
 
 //icons
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -10,6 +11,7 @@ import SearchIcon from "@mui/icons-material/Search";
 const ProductItem = (props) => {
   const [isHover, setIsHover] = useState(false);
   const { id, img, name } = props.item;
+  console.log(id)
 
   const enterContainer = () => {
     setIsHover(true);
@@ -37,9 +39,11 @@ const ProductItem = (props) => {
           <div className={classes.icon}>
             <ShoppingCartOutlinedIcon />
           </div>
+          <Link href={`/product-detail/${id}`} >
           <div className={classes.icon}>
             <SearchIcon />
           </div>
+          </Link>
           <div className={classes.icon}>
             <FavoriteBorderIcon />
           </div>

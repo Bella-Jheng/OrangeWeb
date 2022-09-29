@@ -14,13 +14,17 @@
   height: 75%;
   background-color: white;
   text-align: center;
-  border: 1px solid #f1f1f1;
+  border: 2px solid #f1f1f1;
   border-radius: 5px;
   padding: 20px;
 }
 
 .header{
     padding: 10px;
+}
+
+.header span{
+    margin: 0 10px;
 }
 
 .link{
@@ -46,15 +50,16 @@
     width: 100%;
 }
 
-.inputContainer{
-    margin-bottom: 40px;
+.inputContainer button{
+    margin-top: 40px;
 }
 
 .forgetPassword{
-    text-decoration: none;
+    text-decoration:underline;
     color: #666;
     font-size: 10px;
     margin: auto 3px;
+    cursor: pointer;
 }
 
 .forgetPassword:hover{

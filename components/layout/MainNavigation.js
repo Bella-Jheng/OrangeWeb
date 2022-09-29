@@ -21,11 +21,13 @@ const toggleHandler=()=>{
     <header className={classes.container}>
       <div className={classes.wrapper}>
         <div className={classes.left}>
+        <Link href="/">
           <Image alt="Logo" src="/Logo.png" width="100" height="50"></Image>
+       </Link>
         </div>
         <div className={classes.center}>
           <div className={classes.menuItem}>
-            <Link href="/">
+            <Link href="/product-list">
               <a className={classes.link}>線上商店</a>
             </Link>
           </div>
@@ -37,7 +39,7 @@ const toggleHandler=()=>{
         </div>
         <div className={classes.right}>
           <div className={classes.menuItem}>
-            <Link href="/">
+            <Link href="/login">
               <a className={classes.link}>會員登入</a>
             </Link>
           </div>

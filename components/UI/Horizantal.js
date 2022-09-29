@@ -7,7 +7,7 @@ const sectionHorizontal = {
   textAlign: "center",
   borderBottom: "1px solid #ced4da",
   lineHeight: "0.1em",
-  margin: "25px auto",
+  margin: "60px auto 25px auto",
 };
 
 const sectionSpan = {

@@ -1,0 +1,81 @@
+.container {
+  padding-top: 80px;
+}
+
+.wrapper {
+  padding: 125px 50px 50px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cartContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 100%;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.cartContainer h2 {
+  display: inline-block;
+}
+
+.cartHeader {
+  display: flex;
+  flex: 100%;
+  border: 1px solid #ededed;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.column {
+  display: flex;
+  border: 1px solid #ededed;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.cartMainPart {
+  display: flex;
+  align-items: flex-start;
+  flex: 55%;
+}
+
+.cartMainPart img {
+  max-width: 90px;
+  max-height: 90px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.cartInfor {
+  flex: 15%;
+}
+
+.custinforContainer {
+  flex: 50%;
+  margin-top: 20px;
+}
+
+.custHeaderColumn {
+  border: 1px solid #ededed;
+  padding: 10px;
+  background-color: #ededed;
+}
+
+.custColumn {
+  flex: 100%;
+  margin-top: 10px;
+}
+.custColumn input {
+  width: 100%;
+  border: 1px solid #cecccc;
+}
+
+.bottomContainer {
+  flex: 1;
+  text-align: right;
+  margin-top: 20px;
+}

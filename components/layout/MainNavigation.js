@@ -11,12 +11,6 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 const MainNavigation = (props) => {
 //   const matches = useMediaQuery("(max-width:600px)");
-const [isToogle , setIsToggle] = useState(false)
-
-const toggleHandler=()=>{
-    setIsToggle(prevState => (!prevState))
-}
-
   return (
     <header className={classes.container}>
       <div className={classes.wrapper}>
@@ -43,20 +37,10 @@ const toggleHandler=()=>{
               <a className={classes.link}>會員登入</a>
             </Link>
           </div>
-          <div className={classes.menuItem}>
+          <div className={classes.menuItem} onClick={props.handleCart}>
             <Badge badgeContent={4} color="primary">
               <ShoppingCartOutlined />
             </Badge>
-          </div>
-        </div>
-        <div className={classes.menu}>
-          <div className={classes.menuItem}>
-            <Badge badgeContent={4} color="primary">
-              <ShoppingCartOutlined />
-            </Badge>
-          </div>
-          <div className={classes.menuItem} onClick={toggleHandler}>
-            <MenuIcon />
           </div>
         </div>
       </div>

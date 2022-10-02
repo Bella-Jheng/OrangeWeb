@@ -3,6 +3,10 @@ import Banner from "../../components/layout/Banner";
 import Products from "../../components/products/Products";
 import styled from "styled-components";
 
+const Container =styled.div`
+  padding-top: 80px;
+`
+
 const Section = styled.div`
   padding-top: 75px;
 `;
@@ -27,7 +31,7 @@ const Select = styled.select`
 const Option = styled.option``;
 const index = () => {
   return (
-    <Fragment>
+    <Container>
       <Banner title="線上商店" />
       <Section>
         <FilterContainer>
@@ -49,7 +53,7 @@ const index = () => {
         </FilterContainer>
         <Products />
       </Section>
-    </Fragment>
+    </Container>
   );
 };
 

@@ -11,7 +11,6 @@ import SearchIcon from "@mui/icons-material/Search";
 const ProductItem = (props) => {
   const [isHover, setIsHover] = useState(false);
   const { id, img, name } = props.item;
-  console.log(id)
 
   const enterContainer = () => {
     setIsHover(true);

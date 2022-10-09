@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useRouter } from "next/router";
 import Link from "next/link";
 import classes from "./index.module.css";
 import { cartActions } from "../../store/cart-slice";
@@ -11,28 +10,27 @@ import Horizontal from "../../components/UI/Horizantal";
 import { productDetails } from "../../components/data";
 import { Add, Remove } from "@mui/icons-material";
 
-const Index = () => {
-  const params = useRouter().query;
-  const { productId } = params;
-  const productObject = productDetails.find(({ id }) => id === productId);
-  const { id, img, name, price, size, productImg, intro, description } =
-    productObject;
+const ProductDetails = (props) => {
+  const { id, name, price, size, productImg, intro, description } = props;
 
   const dispatch = useDispatch();
   const addToCartHandler = () => {
     dispatch(
       cartActions.addToCart({
         id,
-        img,
+        img: productImg,
         name,
         price: thePrice.price,
-        size: thePrice.size?thePrice.size:null,
+        size: thePrice.size ? thePrice.size : null,
         quantity: amount,
       })
     );
   };
   //不同 size 的價格不同
-  const [thePrice, setThePrice] = useState({ price: price[0], size: size?size[0]:null });
+  const [thePrice, setThePrice] = useState({
+    price: price ? price[0] : null,
+    size: size ? size[0] : null,
+  });
   const changePriceHandler = (event) => {
     const value = event.target.value;
     setThePrice({
@@ -89,8 +87,14 @@ const Index = () => {
             </div>
           </div>
           <div className={classes.addContainer}>
-            <GreenButton title="加入購物車" onClick={addToCartHandler} type="button" />
-            <Link href='/checkout'><Button title="立刻購買" /></Link>
+            <GreenButton
+              title="加入購物車"
+              onClick={addToCartHandler}
+              type="button"
+            />
+            <Link href="/checkout">
+              <Button title="立刻購買" />
+            </Link>
           </div>
         </div>
         <div className={classes.detailContainer}>
@@ -102,4 +106,32 @@ const Index = () => {
   );
 };
 
-export default Index;
+export async function getStaticPaths() {
+  return {
+    fallback: true,
+    paths: productDetails.map((detail) => ({
+      params: { productId: detail.id },
+    })),
+  };
+}
+
+export async function getStaticProps(context) {
+  const productId = context.params.productId;
+  const selectedProduct = productDetails.find(
+    (product) => product.id === productId
+  );
+
+  return {
+    props: {
+      id: selectedProduct.id.toString(),
+      name: selectedProduct.name,
+      price: selectedProduct.price,
+      size: selectedProduct.size ? selectedProduct.size : null,
+      productImg: selectedProduct.productImg,
+      intro: selectedProduct.intro,
+      description: selectedProduct.description,
+    },
+  };
+}
+
+export default ProductDetails;

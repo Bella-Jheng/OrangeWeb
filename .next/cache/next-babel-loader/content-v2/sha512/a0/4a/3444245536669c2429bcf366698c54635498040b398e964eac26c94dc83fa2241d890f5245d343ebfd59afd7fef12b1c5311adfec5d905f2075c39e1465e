@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from \"react\";\nvar AuthContext = /*#__PURE__*/React.createContext({\n  token: \"\",\n  isLogin: false,\n  login: function login(token) {},\n  logout: function logout() {}\n});\nexport default AuthContext;","map":null,"metadata":{},"sourceType":"module"}

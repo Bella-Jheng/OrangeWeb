@@ -84,3 +84,8 @@
   text-align: right;
   margin-top: 20px;
 }
+
+.invalid{
+  color : red;
+  font-size: 5px;
+}

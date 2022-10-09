@@ -24,7 +24,7 @@ const MainNavigation = (props) => {
   const handleAlertClose = () => {
     setAlertOpen(false);
   };
-  //   const matches = useMediaQuery("(max-width:600px)");
+  //const matches = useMediaQuery("(max-width:600px)");
   const authCtx = useContext(AuthContext);
   const onLogout = () => {
     setAlertOpen(false);

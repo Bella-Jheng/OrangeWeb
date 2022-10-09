@@ -34,18 +34,20 @@
 
 .price {
   font-size: 18px;
+  font-weight: 900;
+  color: #fe2f45;
 }
 
 .filterContainer {
-  width: 50%;
   margin: 30px 0px;
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
 }
 
 .filter {
   display: flex;
   align-items: center;
+  margin-right: 25px;
 }
 
 .filterTitle {
@@ -59,16 +61,20 @@
 }
 
 .addContainer {
-  width: 60%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: left;
+}
+
+.addContainer button{
+  margin-right: 10px;
 }
 
 .amountContainer {
   display: flex;
   align-items: center;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .amount {

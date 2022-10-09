@@ -64,26 +64,26 @@ const BorderGreenWords = styled.button`
   cursor: pointer;
 `;
 
-const Button = (props) => {
-  return <OrangeButton width={props.width} >{props.title}</OrangeButton>;
-};
+const Button = React.forwardRef((props,ref) => {
+  return <OrangeButton width={props.width} onClick={props.onClick}>{props.title}</OrangeButton>;
+});
 
-export const BorderButtonWhiteWords = (props) => {
-  return <BorderWhiteWords  width={props.width}>{props.title}</BorderWhiteWords>;
-};
+export const BorderButtonWhiteWords = React.forwardRef((props,ref) => {
+  return <BorderWhiteWords  width={props.width} onClick={props.onClick}>{props.title}</BorderWhiteWords>;
+});
 
-export const BorderButtonOrangeWords = (props) => {
+export const BorderButtonOrangeWords = React.forwardRef((props,ref) => {
   return (
-    <BorderOrangeWords  width={props.width}>{props.title}</BorderOrangeWords>
+    <BorderOrangeWords width={props.width} onClick={props.onClick}>{props.title}</BorderOrangeWords>
   );
-};
+});
 
-export const GreenButton = (props) => {
-  return <GreenbgButton  width={props.width}>{props.title}</GreenbgButton>;
-};
+export const GreenButton = React.forwardRef((props,ref) => {
+  return <GreenbgButton  width={props.width} onClick={props.onClick}>{props.title}</GreenbgButton>;
+});
 
-export const BorderButtonGreenWords = (props) => {
-  return <BorderGreenWords  width={props.width}>{props.title}</BorderGreenWords>;
-};
+export const BorderButtonGreenWords = React.forwardRef((props,ref) => {
+  return <BorderGreenWords  width={props.width} onClick={props.onClick}>{props.title}</BorderGreenWords>;
+});
 
 export default Button;

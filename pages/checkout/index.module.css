@@ -9,6 +9,11 @@
   justify-content: space-between;
 }
 
+.cartEmptyContainer{
+  margin: 10px auto;
+  text-align: center;
+}
+
 .cartContainer {
   display: flex;
   flex-wrap: wrap;
@@ -69,7 +74,7 @@
   flex: 100%;
   margin-top: 10px;
 }
-.custColumn input {
+.custColumn input,.custColumn select {
   width: 100%;
   border: 1px solid #cecccc;
 }

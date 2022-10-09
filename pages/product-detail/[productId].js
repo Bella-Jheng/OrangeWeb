@@ -1,37 +1,53 @@
-import React,{useState} from 'react';
-import classes from "./index.module.css";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useRouter } from "next/router";
+import Link from "next/link";
+import classes from "./index.module.css";
+import { cartActions } from "../../store/cart-slice";
 
-import { Add, Remove } from "@mui/icons-material";
 import Button, { GreenButton } from "../../components/UI/Button";
 import Banner from "../../components/layout/Banner";
 import Horizontal from "../../components/UI/Horizantal";
 import { productDetails } from "../../components/data";
-
-const productObject =  {
-  id: "S1",
-  name: "香甜茂谷禮盒",
-  price: [500, 600, 700],
-  size: [25, 26, 27],
-  productImg: "https://www.owlting.com/business/item/p/480_0/item_14528_92eef9462dfed51c7fd76f64eb9a88ad",
-  intro:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, atiaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donecvenenatis, dolor in finibus malesuada, lectus ipsum porta nunc, atiaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat idcondimentum ac, volutpat ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibusmalesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut.Curabitur elit justo, consequat id condimentum ac, volutpat ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo,consequat id condimentum ac, volutpat ornare.Lorem ipsum dolor sitamet, consectetur adipiscing elit. Donec venenatis, dolor in finibusmalesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut  Curabitur elit justo, consequat id condimentum ac, volutpat ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum portanunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulumex, eget tristique tortor pretium ut. Curabitur elit justo,consequat id condimentum ac, volutpat ornare.",
-}
-
+import { Add, Remove } from "@mui/icons-material";
 
 const Index = () => {
-  const params = useRouter().query
+  const params = useRouter().query;
   const { productId } = params;
   const productObject = productDetails.find(({ id }) => id === productId);
-  const { id, name, price, size, productImg, intro, description } =
+  const { id, img, name, price, size, productImg, intro, description } =
     productObject;
 
-  const [thePrice, setThePrice] = useState(price[0]);
+  const dispatch = useDispatch();
+  const addToCartHandler = () => {
+    dispatch(
+      cartActions.addToCart({
+        id,
+        img,
+        name,
+        price: thePrice.price,
+        size: thePrice.size?thePrice.size:null,
+        quantity: amount,
+      })
+    );
+  };
+  //不同 size 的價格不同
+  const [thePrice, setThePrice] = useState({ price: price[0], size: size?size[0]:null });
   const changePriceHandler = (event) => {
-    const value = event.target.value
-    setThePrice(price[value]);
+    const value = event.target.value;
+    setThePrice({
+      price: price[value],
+      size: size[value],
+    });
+  };
+
+  //數量加減
+  const [amount, setAmount] = useState(1);
+  const addAmountHandler = () => {
+    setAmount((prev) => (prev = prev + 1));
+  };
+  const removeAmountHandler = () => {
+    setAmount((prev) => (prev = prev - 1));
   };
 
   return (
@@ -43,11 +59,11 @@ const Index = () => {
         </div>
         <div className={classes.infoContainer}>
           <h1 className={classes.title}>{name}</h1>
-          <span className={classes.price}>$ {thePrice}</span>
+          <span className={classes.price}>$ {thePrice.price}</span>
           <p className={classes.description}>{intro}</p>
 
-          {size && (
-            <div className={classes.filterContainer}>
+          <div className={classes.filterContainer}>
+            {size && (
               <div className={classes.filter}>
                 <span className={classes.filterTitle}>Size</span>
                 <select
@@ -65,16 +81,16 @@ const Index = () => {
                   ))}
                 </select>
               </div>
-            </div>
-          )}
-          <div className={classes.addContainer}>
+            )}
             <div className={classes.amountContainer}>
-              <Remove />
-              <span className={classes.amount}>1</span>
-              <Add />
+              <Remove onClick={removeAmountHandler} />
+              <span className={classes.amount}>{amount}</span>
+              <Add onClick={addAmountHandler} />
             </div>
-            <GreenButton title="加入購物車"></GreenButton>
-            <Button title="立刻購買" />
+          </div>
+          <div className={classes.addContainer}>
+            <GreenButton title="加入購物車" onClick={addToCartHandler} type="button" />
+            <Link href='/checkout'><Button title="立刻購買" /></Link>
           </div>
         </div>
         <div className={classes.detailContainer}>

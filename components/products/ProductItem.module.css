@@ -18,8 +18,14 @@
     height:75%;
     z-index: 2;
 }
-.productName{
+.container p{
     font-size: 20px;
+    flex:100%;
+    text-align: center;
+}
+
+.container .price{
+    font-size: 15px;
 }
 
 .info{

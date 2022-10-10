@@ -1,0 +1,27 @@
+.picture{
+    display: flex;
+    background-image: url('/Background.JPG');
+    height:550px;
+    font-size:30px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    color: white;
+    align-items:center;
+    justify-content:center;
+    font-style: italic;
+    font-weight:bolder;
+}
+
+@media screen and (min-width:481px) and (max-width:768px){
+    .picture{
+        height:350px;
+        background-size:100%;}
+}  
+
+@media screen and (max-width:480px){
+    .picture{
+        height:215px;
+        background-size:100%;}
+  }

@@ -1,5 +1,5 @@
 .container {
-    padding-top: 80px;
+  padding-top: 80px;
 }
 
 .wrapper {
@@ -20,78 +20,89 @@
   padding: 20px;
 }
 
-.header{
-    padding: 10px;
+.header {
+  padding: 10px;
 }
 
-.header span{
-    margin: 0 10px;
+.header span {
+  margin: 0 10px;
 }
 
-.link{
-    padding: 0px 20px;
-    cursor: pointer;
+.link {
+  padding: 0px 20px;
+  cursor: pointer;
 }
 
-.link:hover{
-    color: #fe7f2e;
+.link:hover {
+  color: #fe7f2e;
 }
 
 .link.visited {
-    background-color: #9EAF6A;
-    border-radius: 5px;
-    color: white;
+  background-color: #9eaf6a;
+  border-radius: 5px;
+  color: white;
 }
 
-.form, .buttonContainer{
-    padding:0 20% 10px 20%;
+.form,
+.buttonContainer {
+  padding: 0 20% 10px 20%;
 }
 
-.form button{
+.form button {
+  width: 100%;
+}
+
+.inputContainer button {
+  margin-top: 40px;
+}
+
+.forgetPassword {
+  text-decoration: underline;
+  color: #666;
+  font-size: 10px;
+  margin: auto 3px;
+  cursor: pointer;
+}
+
+.forgetPassword:hover {
+  color: #fe7f2e;
+}
+
+.loginHorizontal {
+  font-size: 10px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #ced4da;
+  line-height: 0.1em;
+  margin: 25px 0 20px;
+}
+
+.loginHorizontal span {
+  padding: 0 10px;
+  background-color: white;
+}
+
+.googleLogin {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  padding: 2px;
+  text-align: center;
+  width: 100%;
+  color: #666;
+  cursor: pointer;
+}
+
+.googleLogin > span {
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    padding: 125px 0px 50px 0px;
+  }
+  .loginContainer {
     width: 100%;
-}
-
-.inputContainer button{
-    margin-top: 40px;
-}
-
-.forgetPassword{
-    text-decoration:underline;
-    color: #666;
-    font-size: 10px;
-    margin: auto 3px;
-    cursor: pointer;
-}
-
-.forgetPassword:hover{
-    color: #FE7F2E;
-}
-
-.loginHorizontal{
-    font-size: 10px;
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid #ced4da;
-    line-height: 0.1em;
-    margin: 25px 0 20px;
-}
-
-.loginHorizontal span{
-    padding: 0 10px;
-    background-color: white;
-}
-
-.googleLogin{
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid #ced4da;
-    padding: 2px;
-    text-align: center;
-    width: 100%;
-    color: #666;
-    cursor: pointer;
-}
-
-.googleLogin>span{
-    margin-left: 5px;
+    border: none;
+  }
 }

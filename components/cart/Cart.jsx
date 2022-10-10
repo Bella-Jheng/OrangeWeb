@@ -31,7 +31,7 @@ const Cart = (props) => {
               justifyContent: "center",
             }}
           >
-            您的購物車是空的
+                <p>您的購物車是空的</p>
           </Box>
         ) : (
           <Box sx={{ width: "250px" }}>

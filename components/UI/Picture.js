@@ -6,7 +6,7 @@ const myStyle={
   backgroundImage: 
 "url('/Background.JPG')",
   height:'550px',
-  fontSize:'50px',
+  fontSize:'30px',
   backgroundAttachment: 'fixed',
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
@@ -15,7 +15,10 @@ const myStyle={
   alignItems:'center',
   justifyContent:'center',
   fontStyle: 'italic',
-  fontWeight:'bolder'
+  fontWeight:'bolder',
+  '@media (max-width:480px)': {
+    fontSize:'28px',
+  },
 };
 
 const Picture = () => {

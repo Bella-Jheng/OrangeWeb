@@ -58,6 +58,7 @@
 
 .image{
     width: 100%;
+    transform:translateY(-130px) ;
 }
 
 .infoContainer{
@@ -78,3 +79,17 @@
     font-weight: 500;
     letter-spacing: 3px;
 }
+
+@media screen and (min-width:481px) and (max-width:768px){
+    .container {height: 80vh;}
+    .image{
+        transform:translateY(65px) ;
+    }
+}
+
+@media screen and (max-width:480px){
+    .container {height: 50vh;}
+    .image{
+        transform:translateY(150px) ;
+    }
+  }

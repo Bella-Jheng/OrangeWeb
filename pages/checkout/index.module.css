@@ -89,3 +89,8 @@
   color : red;
   font-size: 5px;
 }
+
+@media screen and (max-width:480px){
+  .custinforContainer{flex:100%}
+  .bottomContainer { text-align: center;}
+}

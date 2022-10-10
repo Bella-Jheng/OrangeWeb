@@ -10,7 +10,7 @@
   display: flex;
   flex-wrap: wrap;
   padding: 5% 30px;
-
+  justify-content: center;
 }
 
 .part {

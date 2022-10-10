@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   transition: all 1s ease;
-  transform: translateX(${(props) => props.slideIndex * -100}vw);
+  transform: translateX(${(props) => props.slideIndex * -110}vw);
 `;
 
 const ProductSlider = () => {

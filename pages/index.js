@@ -16,12 +16,14 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
+      <div style={{paddingTop: '80px'}}>
       <Slider />
       <Horizantal title='精選商品'/>
       <ProderSlider />
       <Picture />
       <Horizantal title='緣起'/>
       <Introduction />
+      </div>
     </Fragment>
   );
 }

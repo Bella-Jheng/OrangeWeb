@@ -1,12 +1,9 @@
 {
   "/_app": "pages/_app.js",
-  "/api/hello": "pages/api/hello.js",
-  "/checkout": "pages/checkout.html",
-  "/": "pages/index.html",
-  "/login": "pages/login.html",
-  "/product-detail/[productId]": "pages/product-detail/[productId].js",
-  "/product-list": "pages/product-list.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/product-list": "pages/product-list.js",
+  "/checkout": "pages/checkout.js",
+  "/login": "pages/login.js",
+  "/": "pages/index.js"
 }

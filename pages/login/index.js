@@ -174,13 +174,13 @@ const index = () => {
           </form>
           <div className={classes.buttonContainer}>
             <a className={classes.forgetPassword}>忘記密碼？</a>
-            <h6 className={classes.loginHorizontal}>
+            {/* <h6 className={classes.loginHorizontal}>
               <span>或者</span>
             </h6>
             <div className={classes.googleLogin}>
               <img src="https://img.icons8.com/fluency/15/000000/google-logo.png" />
               <span>google 帳號登入</span>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

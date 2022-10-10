@@ -16,7 +16,7 @@ const myStyle={
   justifyContent:'center',
   fontStyle: 'italic',
   fontWeight:'bolder',
-  '@media (max-width:480px)': {
+  '@media (maxWidth:480px)': {
     fontSize:'28px',
   },
 };

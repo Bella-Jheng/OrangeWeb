@@ -8,11 +8,13 @@ import { cartActions } from "../../store/cart-slice";
 
 //icons
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 
 const ProductItem = (props) => {
   const [isHover, setIsHover] = useState(false);
+  const [isFavorite,setIsFavorite] = useState(false);
   const { id, img, name, price, size } = props.item;
   const dispatch = useDispatch();
  
@@ -35,6 +37,10 @@ const ProductItem = (props) => {
   const exitContainer = () => {
     setIsHover(false);
   };
+
+  const favoriteHandler = ()=>{
+    setIsFavorite(prev => !prev)
+  }
 
   return (
     <div
@@ -63,8 +69,8 @@ const ProductItem = (props) => {
               <SearchIcon />
             </div>
           </Link>
-          <div className={classes.icon}>
-            <FavoriteBorderIcon />
+          <div className={classes.icon} onClick={favoriteHandler}>
+            {isFavorite?<FavoriteIcon/>:<FavoriteBorderIcon />}
           </div>
         </div>
       )}

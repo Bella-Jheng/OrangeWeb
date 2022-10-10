@@ -17,7 +17,7 @@ const myStyle={
   fontStyle: 'italic',
   fontWeight:'bolder',
   '@media (maxWidth:480px)': {
-    fontSize:'28px',
+    backgroundAttachment: 'none',
   },
 };
 
